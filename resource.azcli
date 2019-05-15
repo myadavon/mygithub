@@ -1,0 +1,18 @@
+az group create --location canadacentral --name prod-egcjumpvm-rsg
+az group create --location canadacentral --name prod-landeskvm-rsg
+az group create --location canadacentral --name prod-egcinfrasqlvm-rsg
+az group create --location canadacentral --name prod-egcpassresetvm-rsg
+az group create --location canadacentral --name prod-egcrdslicensevm-rsg
+az group create --location canadacentral --name prod-egcoktaiwavm-rsg
+az group create --location canadacentral --name prod-egcprnsrvvm-rsg
+az group create --location canadacentral --name prod-egcciamvm-rsg
+
+az vm availability-set create -n prod-egcjumpvm-aset -g prod-egcjumpvm-rsg --platform-fault-domain-count 2 --platform-update-domain-count 5
+az vm availability-set create -n prod-landeskvm-aset -g prod-landeskvm-rsg --platform-fault-domain-count 2 --platform-update-domain-count 5
+az vm availability-set create -n prod-egcinfrasqlvm-aset -g prod-egcinfrasqlvm-rsg --platform-fault-domain-count 2 --platform-update-domain-count 5
+az vm availability-set create -n prod-egcpassresetvm-aset -g prod-egcpassresetvm-rsg --platform-fault-domain-count 2 --platform-update-domain-count 5
+az vm availability-set create -n prod-egcrdslicensevm-aset -g prod-egcrdslicensevm-rsg --platform-fault-domain-count 2 --platform-update-domain-count 5
+az vm availability-set create -n prod-egcoktaiwavm-aset -g prod-egcoktaiwavm-rsg --platform-fault-domain-count 2 --platform-update-domain-count 5
+az vm availability-set create -n prod-egcprnsrvvm-aset -g prod-egcprnsrvvm-rsg --platform-fault-domain-count 2 --platform-update-domain-count 5
+az vm availability-set create -n prod-egcciamvm-aset -g prod-egcciamvm-rsg --platform-fault-domain-count 2 --platform-update-domain-count 5
+
